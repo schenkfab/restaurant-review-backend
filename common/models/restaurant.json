@@ -18,6 +18,10 @@
     "location": {
       "type": "string",
       "required": true
+    },
+    "picture": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
