@@ -8,7 +8,7 @@ module.exports = function(Review) {
 			if (err) {
 				throw err;
 			}
-
+			console.log(instances);
 			cb(null, instances);
 		});
 	}
@@ -18,7 +18,8 @@ module.exports = function(Review) {
 		'getByRestaurantId',
 		{
 			http: {path: '/getByRestaurantId', verb: 'get'},
-			accepts: {arg: 'restaurantId', type: 'number', http: { source: 'query' } }
+			accepts: {arg: 'restaurantId', type: 'number', http: { source: 'query' } },
+			returns: {arg: 'reviews', type: 'Array'}
 		})
 
 };
